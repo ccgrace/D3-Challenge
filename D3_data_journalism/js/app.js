@@ -73,7 +73,8 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
       .attr("class", "axisText")
       .text("Age");
-
+    
+      // Create marker text 
     var textGroup = chartGroup.append("g").selectAll("text").data(censusData).enter().append("text")
         .attr("x", d => xLinearScale(d.age)-10)
         .attr("y", d => yLinearScale(d.smokes)+5)
