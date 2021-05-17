@@ -67,7 +67,7 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
       .attr("x", 0 - (height / 2))
       .attr("dy", "1em")
       .attr("class", "axisText")
-      .text("Number of Smokers");
+      .text("Number of Smokers (%)");
 
     chartGroup.append("text")
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
