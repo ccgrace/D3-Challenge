@@ -78,6 +78,7 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
     var textGroup = chartGroup.append("g").selectAll("text").data(censusData).enter().append("text")
         .attr("x", d => xLinearScale(d.age)-10)
         .attr("y", d => yLinearScale(d.smokes)+5)
+        .attr("class", "stateText")
         .classed("state", true).text(d => d.abbr);
 
 }).catch(function(error) {
