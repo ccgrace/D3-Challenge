@@ -19,7 +19,8 @@ var svg = d3.select("#scatter")
   .attr("height", svgHeight);
 
 var chartGroup = svg.append("g")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+  .attr("transform", `translate(${margin.left}, ${margin.top})`)
+  .attr("class", "chart");
 
 // Import data and parse data/cast as numbers
 d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
@@ -58,6 +59,7 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
     .attr("cx", d => xLinearScale(d.age))
     .attr("cy", d => yLinearScale(d.smokes))
     .attr("r", "15")
+    .attr("fill", "lightblue")
     .attr("class", "stateCircle")
 
     // Create axes labels
@@ -76,7 +78,7 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
     
       // Create marker text 
     var textGroup = chartGroup.append("g").selectAll("text").data(censusData).enter().append("text")
-        .attr("x", d => xLinearScale(d.age)-10)
+        .attr("x", d => xLinearScale(d.age))
         .attr("y", d => yLinearScale(d.smokes)+5)
         .classed("stateText", true).text(d => d.abbr);
 
