@@ -57,7 +57,7 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
     .append("circle")
     .attr("cx", d => xLinearScale(d.age))
     .attr("cy", d => yLinearScale(d.smokes))
-    .attr("r", "15")
+    .attr("r", "10")
     .attr("fill", "lightblue")
 
     // Create axes labels
