@@ -4,10 +4,10 @@
 }
 
 /* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
-/* html {
+html {
   position: relative;
   min-height: 100%;
-} */
+}
 
 body {
   /* Padding bottom by footer height */
